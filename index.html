@@ -6,7 +6,8 @@
 
 </head>
 <body>
-	<table id='myTable'>
+
+	<table id='myTable' style='text-align: left;'>
 		<tr id='contents'>
 		  <th>Title</th>
 		  <th>Author</th>
@@ -15,6 +16,21 @@
 		</tr>
 		
 	  </table>
+	<button id='new_book'>New book</button>
+
+	<div class='bg-modal'>
+		<div class='modal-content'>
+		<div class='close'>+</div>
+		<img src="vector-open-book-on-white-background.jpg" width="150"
+		 height="80">
+		 <form>
+			 <input type='text' id='title' placeholder="Title">
+			 <input type='text' id='author' placeholder="Author">
+			 <input type='text' id= 'pages'placeholder="Pages">
+			</form>
+		<button id='add_book'>Add book</button>
+		</div>
+	</div>	
 <script type="text/javascript" src='script.js'></script>
 </body>
 </html>

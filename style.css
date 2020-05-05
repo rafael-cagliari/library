@@ -1,0 +1,34 @@
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position:absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    width: 550px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    position:relative;
+}
+
+input{
+    width:70%;
+    display: block;
+    margin: 15px;
+}
+
+.close{
+    font-size: 40px;
+    position:absolute;
+    top: 0px;
+    right:14px;
+    transform: rotate(45deg);
+    cursor:pointer;
+}

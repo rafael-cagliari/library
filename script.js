@@ -44,6 +44,16 @@ function render(){
     author.innerHTML = myLibrary[i].author;
     pages.innerHTML = myLibrary[i].pages
     read.innerHTML = myLibrary[i].read
+    read.innerHTML = "<button style='read' id='"+myLibrary[i].id+"'>"+myLibrary[i].read+"</button>"
+    read.onclick = function(e){
+        let read_id= e.target.id;
+        for(let i=0; i<myLibrary.length; ++i){
+            if(myLibrary[i].id == read_id){
+            myLibrary[i].changeReadStatus();
+            renderDelete();
+            render();
+            }}
+      };
     deleteBook.innerHTML = "<button id='"+myLibrary[i].id+"'>Delete Book</button>"
     numberRow += 1
 

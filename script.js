@@ -4,7 +4,7 @@ let table = document.getElementById('myTable')
 let row = ''
 let numberRow = 1
 let render_switch = 'off'
-let BookID = 0
+let BookID = 3;
 
 
 function bookGenerator(title, author, pages, read, id){
@@ -41,10 +41,17 @@ function render(){
     read = row.insertCell(3);
     deleteBook = row.insertCell(4);
     title.innerHTML = myLibrary[i].title;
+    title.innerHTML.style
     author.innerHTML = myLibrary[i].author;
     pages.innerHTML = myLibrary[i].pages
     read.innerHTML = myLibrary[i].read
-    read.innerHTML = "<button style='read' id='"+myLibrary[i].id+"'>"+myLibrary[i].read+"</button>"
+    if(myLibrary[i].read=='yes'){
+        read.innerHTML = '<button style="color:green" class="fa fa-book" aria-hidden="true" id="'+myLibrary[i].id+'"></button>'  
+    }
+    else{
+        read.innerHTML = '<button style="color:red" class="fa fa-book" aria-hidden="true" id="'+myLibrary[i].id+'"></button>'
+    }
+   
     read.onclick = function(e){
         let read_id= e.target.id;
         for(let i=0; i<myLibrary.length; ++i){
@@ -89,14 +96,17 @@ document.querySelector('.close').addEventListener('click', function(){
                 render();
             }}}})
             
-
-            document.getElementById('render').addEventListener('click', function(){
-                render()});
-                document.getElementById('render delete').addEventListener('click', function(){
-                    renderDelete()});
-
 bookGenerator.prototype.changeReadStatus= function(){
     if(this.read == 'yes'){
         this.read = 'no'}
     else if(this.read == 'no'){
         this.read = 'yes'}}
+
+let standard_book_1 = new bookGenerator('Harry Potter and the Order of the Phoenix', 'J.K. Rowling', '766', 'yes',0);
+let standard_book_2 = new bookGenerator('The Karamazov Brothers', 'Fiodor Dostoievski', '920', 'no',1);
+let standard_book_3 = new bookGenerator('Learning JavaScript Data Structures & Algorithms', 'Loiane Groner', '202', 'no',2);
+ 
+addEntry(standard_book_1);
+addEntry(standard_book_2);
+addEntry(standard_book_3);
+render()

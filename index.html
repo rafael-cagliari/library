@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Library</title>
+	<title>librorum</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-
+	
+	<div class='header'> 
+		<div class='header-text'>librorum</div>
+		<div class='header-text2'>your digital bookshelf</div>
+	</div>
+	<div class='books'>Books</div>
 	<table id='myTable' style='text-align: left;'>
 		<tr id='contents'>
 		  <th>Title</th>
@@ -17,17 +24,15 @@
 		
 	  </table>
 	<button id='new_book'>New book</button>
-	<button id='render'>Render</button>
-	<button id='render delete'>Render delete</button>
 	<div class='bg-modal'>
 		<div class='modal-content'>
 		<div class='close'>+</div>
 		<img src="vector-open-book-on-white-background.jpg" width="150"
 		 height="80">
 		 <form>
-			 <input type='text' id='title' placeholder="Title">
-			 <input type='text' id='author' placeholder="Author">
-			 <input type='text' id= 'pages'placeholder="Pages">
+			 <input type='text' id='title' placeholder="Title" maxlength="70">
+			 <input type='text' id='author' placeholder="Author" maxlength="50">
+			 <input type='text' id= 'pages'placeholder="Pages"maxlength="6">
 			 <input type="radio" id="yes" name="read" value="yes">
 			 <label for="male">Yes</label><br>
 			 <input type="radio" id="no" name="read" value="no">

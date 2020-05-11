@@ -1,3 +1,54 @@
+.header {
+    overflow: auto;
+    height: 150px;
+    background-image: linear-gradient(30deg, #3c2b25, #9a6868);
+    color: white;
+    font-family: 'Amatic SC';
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-text{
+    height: 50px;
+    font-size: 63px;
+    left: 24px;
+    position: absolute;
+    top: 39px;
+}
+.header-text2{
+    font-family: 'Jost';
+    position: absolute;
+    left: 25px;
+    bottom: 16px;
+
+}
+
+.books{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-left: 20px;
+    font-family: Jost;
+}
+
+
+table{
+    margin-left: 20px;
+
+}
+td {
+    margin-left: 2px;
+}
+
+.fa-book{
+    border:none;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.fa-book:hover{
+    transform: scale(1.2);
+}
 .bg-modal {
     width: 100%;
     height: 100%;
@@ -16,6 +67,12 @@
     border-radius: 5px;
     padding: 10px;
     position:relative;
+}
+
+td, th{
+    padding-left: 20px;
+    padding-bottom: 20px;
+
 }
 
 input{

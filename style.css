@@ -1,3 +1,4 @@
+
 .header {
     overflow: auto;
     height: 150px;
@@ -22,33 +23,75 @@
     bottom: 16px;
 
 }
-
+.contents{
+    background-color: #513834;
+    color: #fff0f0;
+}
 .books{
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
-    font-family: Jost;
+    font-family: monospace;
+    color: #403634e6;
 }
 
 
 table{
     margin-left: 20px;
+    border-collapse: collapse;
+    width: 70%;
+}
 
+table th:first-child{
+    border-top-left-radius: 15px;
+}
+
+table th:last-child{
+    border-top-right-radius: 15px;
 }
 td {
-    margin-left: 2px;
+    
+    background-color:#e4e4e4a8;
+    font-size: 17px;
 }
 
+.book-delete{
+    font-weight: 600;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: #ededed;
+    color: #513834;
+    border-style: hidden;
+    padding: 10px;
+}
+
+.book-delete:hover{
+    background-color:#513834;
+    color: #ededed;
+    cursor: pointer;
+}
 .fa-book{
     border:none;
     background-color: transparent;
     cursor:pointer;
+    font-size:18px;
 }
 
 .fa-book:hover{
     transform: scale(1.2);
 }
+
+.fa-plus{
+    color: green;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .bg-modal {
     width: 100%;
     height: 100%;
@@ -71,7 +114,8 @@ td {
 
 td, th{
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
 }
 

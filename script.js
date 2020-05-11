@@ -36,12 +36,12 @@ function render(){
     let row = table.insertRow(numberRow);
     row.id = 'ok'
     title = row.insertCell(0);
+    title.style.fontStyle='italic';
     author = row.insertCell(1);
     pages = row.insertCell(2);
     read = row.insertCell(3);
     deleteBook = row.insertCell(4);
     title.innerHTML = myLibrary[i].title;
-    title.innerHTML.style
     author.innerHTML = myLibrary[i].author;
     pages.innerHTML = myLibrary[i].pages
     read.innerHTML = myLibrary[i].read
@@ -61,7 +61,7 @@ function render(){
             render();
             }}
       };
-    deleteBook.innerHTML = "<button id='"+myLibrary[i].id+"'>Delete Book</button>"
+    deleteBook.innerHTML = "<button class='book-delete' id='"+myLibrary[i].id+"'>Delete Book</button>"
     numberRow += 1
 
     

@@ -27,18 +27,20 @@
 	<div class='bg-modal'>
 		<div class='modal-content'>
 		<div class='close'>+</div>
-		<img src="vector-open-book-on-white-background.jpg" width="150"
-		 height="80">
-		 <form>
+		 <div class='form-header'>Add a Book</div>
+		 <form class='book-form'>
 			 <input type='text' id='title' placeholder="Title" maxlength="70">
 			 <input type='text' id='author' placeholder="Author" maxlength="50">
 			 <input type='text' id= 'pages'placeholder="Pages"maxlength="6">
-			 <input type="radio" id="yes" name="read" value="yes">
+		</form>
+		<form style="display:flex;margin-top: 10px;margin-bottom: 10px; align-content: center; margin-left: 60px;">
+			<div>Have you read this book?</div>
+			 <input style="margin-top: 3px; width: 20px; margin-right: 0px;"type="radio" id="yes" name="read" value="yes">
 			 <label for="male">Yes</label><br>
-			 <input type="radio" id="no" name="read" value="no">
+			 <input style="margin-top: 3px; width: 20px; margin-right: 0px;" type="radio" id="no" name="read" value="no">
 			 <label for="female">No</label><br>
-			</form>
-		<button id='add_book'>Add book</button>
+		</form>
+		<button style='background: none;border: none; margin-top: 8px; margin-left: 0px;' class='fa fa-plus' id='add_book'>Add book</button>
 		</div>
 	</div>	
 <script type="text/javascript" src='script.js'></script>

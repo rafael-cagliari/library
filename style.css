@@ -104,12 +104,15 @@ td {
 }
 
 .modal-content{
-    width: 550px;
-    height: 400px;
+    width: 400px;
+    height: 315px;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     position:relative;
+    display:flex;
+    flex-direction: column;
+
 }
 
 td, th{
@@ -119,10 +122,21 @@ td, th{
 
 }
 
+.book-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 input{
     width:70%;
     display: block;
     margin: 15px;
+}
+.form-header{
+    margin-top: 30px;
+    margin-bottom: 7px;
+    font-weight: bold;
 }
 
 .close{

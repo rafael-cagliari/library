@@ -1,9 +1,9 @@
-let newBook =''
+let newBook ='';
 let myLibrary = [];
-let table = document.getElementById('myTable')
-let row = ''
-let numberRow = 1
-let render_switch = 'off'
+let table = document.getElementById('myTable');
+let row = '';
+let numberRow = 1;
+let render_switch = 'off';
 let BookID = 3;
 
 
@@ -14,7 +14,7 @@ function bookGenerator(title, author, pages, read, id){
     this.read = read;
     this.id = id;
     
-};
+}
 
 
 function addEntry(book){
@@ -34,7 +34,7 @@ function renderDelete(){
 function render(){
     for(let i=0; i<myLibrary.length; i++){
     let row = table.insertRow(numberRow);
-    row.id = 'ok'
+    row.id = 'ok';
     title = row.insertCell(0);
     title.style.fontStyle='italic';
     author = row.insertCell(1);
@@ -43,8 +43,8 @@ function render(){
     deleteBook = row.insertCell(4);
     title.innerHTML = myLibrary[i].title;
     author.innerHTML = myLibrary[i].author;
-    pages.innerHTML = myLibrary[i].pages
-    read.innerHTML = myLibrary[i].read
+    pages.innerHTML = myLibrary[i].pages;
+    read.innerHTML = myLibrary[i].read;
     if(myLibrary[i].read=='yes'){
         read.innerHTML = '<button style="color:green" class="fa fa-book" aria-hidden="true" id="'+myLibrary[i].id+'"></button>'  
     }
@@ -62,12 +62,12 @@ function render(){
             }}
       };
     deleteBook.innerHTML = "<button class='book-delete' id='"+myLibrary[i].id+"'>Delete Book</button>"
-    numberRow += 1
+    numberRow += 1;
 
     
     }
     numberRow = 1
-    render_switch = 'on'
+    render_switch = 'on';
 }
 
 document.getElementById('new_book').addEventListener('click', function(){
@@ -94,13 +94,16 @@ document.querySelector('.close').addEventListener('click', function(){
                 myLibrary.splice(i,1);
                 renderDelete();
                 render();
-            }}}})
+            }}}});
             
 bookGenerator.prototype.changeReadStatus= function(){
     if(this.read == 'yes'){
-        this.read = 'no'}
+        this.read = 'no';
+    }
     else if(this.read == 'no'){
-        this.read = 'yes'}}
+        this.read = 'yes';
+    }
+    };
 
 let standard_book_1 = new bookGenerator('Harry Potter and the Order of the Phoenix', 'J.K. Rowling', '766', 'yes',0);
 let standard_book_2 = new bookGenerator('The Karamazov Brothers', 'Fiodor Dostoievski', '920', 'no',1);
